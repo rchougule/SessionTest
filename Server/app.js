@@ -21,10 +21,18 @@ app.listen(6969, () => {
     console.log("Server Started on 6969");
 })
 
-app.get("/addSession", (req,res) => {
+app.post("/addSession", (req,res) => {
+    var formDetails = {
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        password: req.body.password,
+        email: req.body.email
+    }
+
+    console.log(formDetails);
     var sessionName = "rohan chougule";
     req.session.name = sessionName;
-    res.status(200).send("Done");
+    res.redirect("http://localhost:8080")
 })
 
 app.get("/whatsMySessionName", (req,res) => {

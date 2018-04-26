@@ -17,9 +17,36 @@
                     <a class="btn-floating pulse" href="http://localhost:6969/addSession"><i class="material-icons">menu</i></a>
                 </div>
 
-                <div class="col s11 m10 l9 teal light rightPage">
+                <div class="col s11 m10 l9 teal darken-2 rightPage container">
                     <div class="row"></div>
-                    <a class="waves-light btn" href="http://localhost:6969/whatsMySessionName">See Name</a>
+                    <form class="col s12" method="POST" action="http://localhost:6969/addSession">
+                        <div class="row">
+                            <div class="input-field col s6 white-text">
+                                <input id="firstName" type="text" class="validate white-text" name="firstName" required>
+                                <label for="firstName" class="white-text">First Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="lastName" type="text" class="validate white-text" name="lastName" required>
+                                <label for="lastName" class="white-text">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="password" type="password" class="validate white-text" name="password" required>
+                                <label for="password" class="white-text">Password</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" type="email" class="validate white-text" name="email" required>
+                                <label for="email" class="white-text">Email ID</label>
+                            </div>
+                        </div>
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </form>
+                    <!-- <a class="waves-light btn" href="http://localhost:6969/whatsMySessionName">See Name</a> -->
                 </div>
             </div>
         </div>
